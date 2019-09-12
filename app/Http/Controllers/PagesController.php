@@ -7,7 +7,12 @@ use App;
 
 class PagesController extends Controller
 {
-    public function inicio()
+    public function index()
+    {
+        return view('index');
+    }
+
+    public function categories()
     {
         $categorias = App\Category::all();
         return view('categorias', compact('categorias'));

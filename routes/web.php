@@ -11,4 +11,5 @@
 |
 */
 
-Route::get('/','PagesController@inicio');
+Route::get('/','PagesController@index');
+Route::get('/categories','PagesController@categories');
