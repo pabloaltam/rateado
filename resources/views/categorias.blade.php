@@ -18,36 +18,26 @@
             <div class="columns">
                 <div class="column is-full">
                     <div class="tile is-ancestor" style="flex-wrap: wrap;">
-                        @foreach($categorias as $item)
+                        @foreach($categories as $item)
                             <div class="tile is-4 is-parent">
                                 <article class="tile is-child box">
+                                    <div class="control is-clearfix is-pulled-right">
+                                        <div class="tags has-addons">
+                                            <span class="tag is-danger">{{count($item->subcategory)}}</span>
+                                            <span class="tag is-dark">subcat</span>
+                                        </div>
+                                    </div>
                                     <p class="title">{{$item->name}}</p>
                                     <p class="subtitle">{{$item->description}}</p>
+                                    {{--@foreach($item->subcategory as $subcat)
+                                        <p class="font-weight-bold">{{$subcat->name}}</p>
+                                    @endforeach--}}
                                 </article>
                             </div>
                         @endforeach()
                     </div>
                 </div>
             </div>
-            {{--<table class="table is-striped is-narrow is-hoverable is-fullwidth">
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($categorias as $item)
-                    <tr>
-                        <th scope="row">{{$item->id}}</th>
-                        <td>{{$item->name}}</td>
-                        <td>{{$item->description}}</td>
-                    </tr>
-                @endforeach()
-                </tbody>
-            </table>--}}
         </div>
     </div>
-
 @endsection

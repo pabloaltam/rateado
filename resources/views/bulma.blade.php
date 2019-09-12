@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
-<body class="has-background-light">
-<nav class="navbar container is-light" role="navigation" aria-label="main navigation">
+<body>
+<nav class="navbar container" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <div class="navbar-item has-text-weight-bold is-size-5" href="">
             <a href="{{url('/')}}">Ranked</a>
