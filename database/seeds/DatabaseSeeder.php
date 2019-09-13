@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
+    use App\Item;
+    use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,5 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(CategoryTableSeeder::class);
+        $this->call(SubcategoryTableSeeder::class);
+        $this->call(ItemTableSeeder::class);
     }
 }

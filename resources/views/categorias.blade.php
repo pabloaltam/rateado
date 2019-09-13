@@ -3,16 +3,16 @@
 @section('seccion')
     <div class="section">
         <div class="container">
-            <div class="section has-text-centered">
+            {{--<div class="section has-text-centered">
                 <h1 class="title">Categorías</h1>
                 <h2 class="subtitle">Aquí se encuentran las categorías disponibles.</h2>
-            </div>
+            </div>--}}
             <article class="message is-info">
                 <div class="message-body">
                     <span class="icon has-text-info">
                         <i class="fas fa-info-circle"></i>
                     </span>
-                    ¿No encuentras la categoría que buscas? <a style="text-decoration: none;" href="javascript:void(0)"><strong>Sugierela</strong>.</a>
+                    ¿No encuentras la categoría que buscas? <a style="text-decoration: none;" href="javascript:void(0)"><strong>Sugiérela</strong>.</a>
                 </div>
             </article>
             <div class="columns">
@@ -20,13 +20,9 @@
                     <div class="tile is-ancestor" style="flex-wrap: wrap;">
                         @foreach($categories as $item)
                             <div class="tile is-4 is-parent">
+
                                 <article class="tile is-child box">
-                                    <div class="control is-clearfix is-pulled-right">
-                                        <div class="tags has-addons">
-                                            <span class="tag is-danger">{{count($item->subcategory)}}</span>
-                                            <span class="tag is-dark">subcat</span>
-                                        </div>
-                                    </div>
+                                    <span class="tag is-danger is-clearfix is-pulled-right">{{count($item->subcategory)}}</span>
                                     <p class="title">{{$item->name}}</p>
                                     <p class="subtitle">{{$item->description}}</p>
                                     {{--@foreach($item->subcategory as $subcat)

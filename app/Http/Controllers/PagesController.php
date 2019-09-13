@@ -12,9 +12,9 @@ class PagesController extends Controller
         return view('index');
     }
 
-    /*public function categories()
+    public function category($id)
     {
-        $categorias = App\Category::all();
-        return view('categorias', compact('categorias'));
-    }*/
+        $category = App\Category::all();
+        return view('category', compact('category'));
+    }
 }
